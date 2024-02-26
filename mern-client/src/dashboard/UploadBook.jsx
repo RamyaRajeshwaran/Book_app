@@ -30,7 +30,7 @@ const UploadBook = () => {
             bookTitle, authorName, imageURL, category, bookDescription, bookPDFURL
         };
 
-        fetch("http://localhost:5000/upload-book", {
+        fetch("book-app-wheat-delta.vercel.app/upload-book", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
