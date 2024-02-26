@@ -5,7 +5,7 @@ const OtherBooks = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:5000/all-books").then(res => res.json()).then(data => setBooks(data.slice(0,6)))
+        fetch("book-app-wheat-delta.vercel.app/all-books").then(res => res.json()).then(data => setBooks(data.slice(0,6)))
     }, [])
   return ( 
     <div>
