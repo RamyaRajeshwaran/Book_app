@@ -19,6 +19,10 @@ async function run() {
     const db = client.db("BookInventory");
     const bookCollections = db.collection("books");
 
+    app.get("/", (req, res) => {
+      res.send("Welcome to the Book Inventory App");
+    });
+
     app.post("/upload-book", async (req, res) => {
       const data = req.body;
       const result = await bookCollections.insertOne(data);
