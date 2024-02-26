@@ -6,7 +6,7 @@ const ManageBooks = () => {
     const [allBooks, setAllBooks] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/all-books")
+        fetch("book-app-wheat-delta.vercel.app/all-books")
             .then(res => res.json())
             .then(data => setAllBooks(data))
             .catch(error => console.error('Error fetching books:', error));
@@ -14,7 +14,7 @@ const ManageBooks = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/book/${id}`, {
+        fetch(`book-app-wheat-delta.vercel.app/book/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())
