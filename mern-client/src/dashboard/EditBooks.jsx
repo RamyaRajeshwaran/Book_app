@@ -46,7 +46,7 @@ const EditBooks = () => {
             bookPDFURL: form.bookPDFURL.value
         };
 
-        fetch(`http://localhost:5000/book/${id}`, {
+        fetch(`book-app-wheat-delta.vercel.app/book/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
