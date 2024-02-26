@@ -1,8 +1,11 @@
 {
+    "buildCommand": "cd mern-client && npm install && npm run dev",
+    "outputDirectory": "mern-client/node_modules",
+    "framework": "vite",
     "rewrites":[
         {
-            "source": "/api/(.*)",
-            "destination": "/api"
+            "source": "/mern-server/(.*)",
+            "destination": "/mern-server/index.js"
         }
     ]
 }
